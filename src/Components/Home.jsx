@@ -11,10 +11,9 @@ function Home() {
       const response = await axios.delete(`http://localhost:3000/users/${id}`);
       const ok = alert("are yousure delete this")
       console.log("User deleted:", response.data);
-      setData(data.filter((user) => user.id !== id)); // Update local data
+      setData(data.filter((user) => user.id !== id)); 
     } catch (error) {
       console.error(error);
-      // Handle errors appropriately (e.g., display error message to the user)
     }
   };
 
